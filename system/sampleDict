@@ -25,24 +25,33 @@ interpolationScheme cellPointFace;
 fields
 (
     U
+    p
 );
 
 sets
 (
     line1
     {
-        type        lineFace;
+        //type        lineCell;
+        type        lineUniform;
+        nPoints     11;
         axis        x;
-        start       (-0.5 0.5 0.5);
-        end         (1.5 0.5 0.5);        
+        //start       (-0.5 0.5 0.5);
+        //end         (1.5 0.5 0.5);        
+        start       (0 0.5 0.5);
+        end         (1 0.5 0.5);        
     }
 
     line2
     {
-        type        lineFace;
+        //type        lineCell;
+        type        lineUniform;
+        nPoints     11;
         axis        y;
-        start       (0.5 -0.5 0.5);
-        end         (0.5 1.5 0.5);
+        //start       (0.5 -0.5 0.5);
+        //end         (0.5 1.5 0.5);
+        start       (0.5 0 0.5);
+        end         (0.5 1 0.5);
     }
 );
 
