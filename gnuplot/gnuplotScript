@@ -1,0 +1,26 @@
+set terminal qt 0
+set grid xtics
+set grid ytics
+
+set key left
+set ylabel "Ux"
+set xlabel "X-centerline"
+
+plot "postProcessing/sampleDict/10/line1.xy" using 1:2 with linespoints points 6 title "Current solution"
+
+set terminal qt 1
+set grid xtics
+set grid ytics
+
+set key left
+set ylabel "Uy"
+set xlabel "Y-centerline"
+
+plot "postProcessing/sampleDict/10/line2.xy" using 1:2 with linespoints points 5 title "Current solution"
+
+print "Plotting with GNUPLOT"
+print "Press ENTER or ctrl+c to exit"
+
+pause -1;
+
+#EOF
