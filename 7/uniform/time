@@ -7,17 +7,24 @@
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
-    format          ascii;
-    class           dictionary;
-    location        "constant";
-    object          physicalProperties;
+    format      ascii;
+    class       dictionary;
+    location    "7/uniform";
+    object      time;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-viscosityModel      constant;
+beginTime       0;
 
-//nu                  [0 2 -1 0 0 0 0] 0.1;          //Re = 10
-nu                  [0 2 -1 0 0 0 0] 0.01;           //Re = 100
-//nu                  [0 2 -1 0 0 0 0] 0.001;        //Re = 1000
+value           7;
+
+name            "7";
+
+index           7;
+
+deltaT          1;
+
+deltaT0         1;
+
 
 // ************************************************************************* //

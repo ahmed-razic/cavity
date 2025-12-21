@@ -1,0 +1,40 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "8";
+    object      U_0;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   nonuniform List<vector> 8((-0.0545967 0.0343466 1.3286e-13) (-0.0273101 -0.0498787 -0.0180591) (0.0814558 0.0498787 0.0164206) (0.108742 -0.0343466 -0.0344797) (-0.0545967 0.0343466 -1.3286e-13) (-0.0273101 -0.0498787 0.0180591) (0.0814558 0.0498787 -0.0164206) (0.108742 -0.0343466 0.0344797));
+
+boundaryField
+{
+    movingWall
+    {
+        type            calculated;
+        value           uniform (1 0 0);
+    }
+    fixedWalls
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

@@ -30,7 +30,7 @@ deltaT          1;
 
 writeControl    timeStep;       //chceck later
 
-writeInterval   2;              //check later
+writeInterval   1;              //check later
 
 purgeWrite      0;              //check later
 
@@ -45,7 +45,7 @@ timePrecision   6;
 runTimeModifiable   true;
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-/*
+
 functions
 {
     minmaxDomainScalar
@@ -116,5 +116,5 @@ functions
         operation   max;
     }
 }
-*/
+
 // ************************************************************************* //
