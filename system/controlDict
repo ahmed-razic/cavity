@@ -44,4 +44,77 @@ timePrecision   6;
 
 runTimeModifiable   true;
 
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+functions
+{
+    minmaxDomainScalar
+    {
+        type            volFieldValue;
+
+        libs            ("libfieldFunctionObjects.so");
+
+        log             true;
+
+        writeControl    timeStep;
+
+        writeFields     false;
+
+        select          all;
+
+        operation       none;
+
+        fields
+        (
+            p
+        );
+    }
+
+    minmaxDomainVector
+    {
+        type            volFieldValue;
+
+        libs            ("libfieldFunctionObjects.so");
+
+        log             true;
+
+        writeControl    timeStep;
+
+        writeFields     false;
+
+        select          all;
+
+        operation       none;
+
+        fields
+        (
+            U
+        );
+    }
+
+    minVelocity
+    {
+        $minmaxDomainVector;
+        operation   minMag;
+    }
+
+    maxVelocity
+    {
+        $minmaxDomainVector;
+        operation   maxMag;
+    }
+
+    minPressure
+    {
+        $minmaxDomainScalar;
+        operation   min;
+    }
+
+    maxPressure
+    {
+        $minmaxDomainScalar;
+        operation   max;
+    }
+}
+
 // ************************************************************************* //
