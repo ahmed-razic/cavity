@@ -45,7 +45,7 @@ timePrecision   6;
 runTimeModifiable   true;
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
+/*
 functions
 {
     minmaxDomainScalar
@@ -116,5 +116,5 @@ functions
         operation   max;
     }
 }
-
+*/
 // ************************************************************************* //
