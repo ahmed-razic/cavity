@@ -7,10 +7,10 @@
 \*---------------------------------------------------------------------------*/
 Build  : 13-cde978a97c93
 Exec   : blockMesh
-Date   : Dec 22 2025
-Time   : 23:00:28
+Date   : Dec 25 2025
+Time   : 20:57:37
 Host   : "HOME"
-PID    : 1131
+PID    : 2533
 I/O    : uncollated
 Case   : /home/ahmed/OpenFOAM/ahmed-13/run/exercises/cavity
 nProcs : 1
@@ -49,9 +49,9 @@ Creating patches
 Creating cells
 Creating points with scale 1
     Block 0 cell size :
-        i : 0.5
-        j : 0.5
-        k : 0.5
+        i : 0.05 .. 0.05
+        j : 0.05 .. 0.05
+        k : 1
 
 No patch pairs to merge
 
@@ -60,16 +60,16 @@ Writing polyMesh
 Mesh Information
 ----------------
   boundingBox: (0 0 0) (1 1 1)
-  nPoints: 27
-  nCells: 8
-  nFaces: 36
-  nInternalFaces: 12
+  nPoints: 882
+  nCells: 400
+  nFaces: 1640
+  nInternalFaces: 760
 ----------------
 Patches
 ----------------
-  patch 0 (start: 12 size: 4) name: movingWall
-  patch 1 (start: 16 size: 12) name: fixedWalls
-  patch 2 (start: 28 size: 8) name: frontAndBack
+  patch 0 (start: 760 size: 20) name: movingWall
+  patch 1 (start: 780 size: 60) name: fixedWalls
+  patch 2 (start: 840 size: 800) name: frontAndBack
 
 End
 
