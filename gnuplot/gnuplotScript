@@ -1,26 +1,43 @@
 set terminal qt 0
 set grid xtics
 set grid ytics
-
 set key left
 set ylabel "Ux"
 set xlabel "X-centerline"
-
 plot "postProcessing/sampleDict/50/line1.xy" using 1:2 with linespoints points 6 title "Current solution"
+
 
 set terminal qt 1
 set grid xtics
 set grid ytics
-
 set key left
 set ylabel "Uy"
 set xlabel "Y-centerline"
-
 plot "postProcessing/sampleDict/50/line2.xy" using 1:2 with linespoints points 5 title "Current solution"
+
+reset
+
+set terminal qt 2
+set grid xtics
+set grid ytics
+set logscale y 
+plot "logs/p_0" using 1:2 with lines, "logs/pFinalRes_0" using 1:2 with lines
+
+
+set terminal qt 3
+set grid xtics
+set grid ytics
+plot "logs/CourantMax_0" u 1:2 w l
+
+
+set terminal qt 4
+set grid xtics
+set grid ytics
+plot [30:50] [] "logs/Ux_0" u 1:2 w l title "Ux", "logs/Uy_0" u 1:2 w l title "Uy"
+
 
 print "Plotting with GNUPLOT"
 print "Press ENTER or ctrl+c to exit"
-
 pause -1;
 
 #EOF
