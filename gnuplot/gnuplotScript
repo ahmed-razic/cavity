@@ -4,7 +4,7 @@ set grid ytics
 set key left
 set ylabel "Ux"
 set xlabel "X-centerline"
-plot "postProcessing/sampleDict/50/line1.xy" using 1:2 with linespoints points 6 title "Current solution"
+plot "postProcessing/sampleDict/50/line1.xy" using 1:2 with linespoints pointtype 6 title "Current solution"
 
 
 set terminal qt 1
@@ -13,7 +13,7 @@ set grid ytics
 set key left
 set ylabel "Uy"
 set xlabel "Y-centerline"
-plot "postProcessing/sampleDict/50/line2.xy" using 1:2 with linespoints points 5 title "Current solution"
+plot "postProcessing/sampleDict/50/line2.xy" using 1:2 with linespoints pt 5 title "Current solution"
 
 reset
 
